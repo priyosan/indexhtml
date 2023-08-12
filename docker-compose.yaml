@@ -1,12 +1,16 @@
-version: '3'
+version: '3.8'
 
 services:
- nginx:
-  image: nginx
+ web:
+  container_name: indexapp-html
+  build: .   #add image
+  expose:
+   - 8085
   ports:
    - "8085:80"
+  restart: always 
   volumes:
-  - ./indexhtml:/usr/share/nginx/html
+  - ./indexhtml/src:/usr/share/nginx/indexhtml/src
   links:
   - php
  php:
