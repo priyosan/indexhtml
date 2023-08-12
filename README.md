@@ -13,11 +13,15 @@ Here are three files
 
 `docker build -t htmltest .`
 
-`docker run -p 8080:80 -v ${PWD}:/usr/share/nginx/html nginx`
+`docker run -p 8080:80 -v ${PWD}:/usr/share/nginx/html htmltest`
 
 ## For running Docker-compose
 
 `docker-compose up -d`
+
+`docker-compose ps`
+
+`docker-compose logs`
 
 You can change index.html for showing different message.
 
