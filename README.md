@@ -1,5 +1,17 @@
 # indexhtml
 
+## Challenge 1
+# error log script 500 error
+
+cat error.log.1 | grep " 500 " | awk -F'"' '{print $2,",",$4,",",$6}' > /home/ubuntu/500.log
+
+# or
+
+var1=`awk '$9 == "500"' access_log | tail -1`
+
+
+
+## Challenge 2
 # html-image-docker-compose
 
 ## This is just a sample project to run docker-compose with a simple html file.
